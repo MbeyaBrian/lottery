@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="home-page" class="page active">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="card-title">Current Game</h2>
+            <span id="game-status-badge" class="badge">Active</span>
+        </div>
+        
+        {% include 'partials/game_status.html' %}
+        
+        <div id="winner-display"></div>
+        
+        <button class="btn btn-primary" onclick="showPage('buy')">Buy Tickets Now</button>
+    </div>
+    
+    <div class="card">
+        <h2 class="card-title">How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <h4><i class="fas fa-ticket-alt"></i> 1. Buy Tickets</h4>
+                <p>Purchase tickets for the current game round (max 3 per player).</p>
+            </div>
+            <div class="step">
+                <h4><i class="fas fa-bullseye"></i> 2. Wait for Draw</h4>
+                <p>When all tickets are sold, the system automatically draws a winner.</p>
+            </div>
+            <div class="step">
+                <h4><i class="fas fa-trophy"></i> 3. Win Prizes</h4>
+                <p>The winner receives their designated amount automatically via M-Pesa.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

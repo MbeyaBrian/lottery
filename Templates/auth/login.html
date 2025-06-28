@@ -1,0 +1,15 @@
+<div class="card">
+    <h2 class="card-title">Login</h2>
+    <div id="login-error" class="alert alert-danger" style="display: none;"></div>
+    <div class="form-group">
+        <label for="login-phone">Phone Number</label>
+        <input type="tel" id="login-phone" class="form-control" placeholder="2547XXXXXXXX" pattern="[0-9]{12}" required>
+    </div>
+    <div class="form-group">
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" class="form-control" required minlength="6">
+    </div>
+    <button class="btn btn-primary" onclick="loginUser()">Login</button>
+    <button class="btn btn-outline" onclick="showPage('home')">Cancel</button>
+    <p style="margin-top: 15px;">Don't have an account? <a href="#" onclick="showPage('register')">Register here</a></p>
+</div>

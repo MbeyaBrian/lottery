@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="my-tickets-page" class="page">
+    <div class="card">
+        <h2 class="card-title">My Tickets</h2>
+        
+        <div id="current-tickets">
+            <h4>Current Game Tickets</h4>
+            <div id="ticket-numbers">
+                <p>Loading your tickets...</p>
+            </div>
+        </div>
+        
+        <div id="previous-wins">
+            <h4>Previous Wins</h4>
+            <div id="win-history">
+                <p>No previous wins yet.</p>
+            </div>
+        </div>
+        
+        <button class="btn btn-primary" onclick="showPage('buy')">Buy More Tickets</button>
+        <button class="btn btn-outline" onclick="showPage('home')">Back to Home</button>
+    </div>
+</div>
+
+<script>
+$(document).ready(function() {
+    fetchGameData();
+});
+</script>
+{% endblock %}

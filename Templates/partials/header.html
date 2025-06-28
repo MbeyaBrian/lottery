@@ -1,0 +1,19 @@
+<header>
+    <div class="container header-content">
+        <div class="logo">Win<span>Big</span></div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('buy')">Buy Tickets</a></li>
+                <li><a href="#" onclick="showPage('my_tickets')">My Tickets</a></li>
+                <li><a href="#" onclick="showPage('withdraw')">Withdraw</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <span id="user-balance" style="margin-right: 15px; font-weight: bold; display: none;">0 KES</span>
+            <button id="login-btn" class="btn btn-outline" onclick="showPage('login')">Login</button>
+            <button id="register-btn" class="btn btn-primary" onclick="showPage('register')">Register</button>
+            <button id="logout-btn" class="btn btn-danger" onclick="logoutUser()" style="display: none;">Logout</button>
+        </div>
+    </div>
+</header>

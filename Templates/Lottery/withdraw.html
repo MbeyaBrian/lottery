@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="withdraw-page" class="page">
+    <div class="card">
+        <h2 class="card-title">Withdraw Winnings</h2>
+        <div id="withdraw-error" class="alert alert-danger" style="display: none;"></div>
+        
+        <div class="form-group">
+            <label>Your Balance: <span id="withdraw-balance" style="font-weight: bold;">0 KES</span></label>
+        </div>
+        
+        <div class="form-group">
+            <label for="withdraw-amount">Amount (KES)</label>
+            <input type="number" id="withdraw-amount" class="form-control" min="100" step="100">
+        </div>
+        
+        <div class="form-group">
+            <label for="withdraw-phone">M-Pesa Phone Number</label>
+            <input type="tel" id="withdraw-phone" class="form-control" placeholder="2547XXXXXXXX" pattern="[0-9]{12}">
+        </div>
+        
+        <button class="btn btn-success" onclick="withdrawFunds()">Withdraw</button>
+        <button class="btn btn-outline" onclick="showPage('home')">Cancel</button>
+    </div>
+</div>
+
+<script>
+$(document).ready(function() {
+    // Update balance display
+    $('#withdraw-balance').text(gameState.userBalance + ' KES');
+});
+</script>
+{% endblock %}
